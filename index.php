@@ -17,13 +17,13 @@ function adminer_object() {
          new AdminerEnumOption
     );
     
-    /* It is possible to combine customization and plugins:
     class AdminerCustomization extends AdminerPlugin {
+         function database() {
+           // database name, will be escaped by Adminer
+           return getenv('CUSTOMIZE_DATABASE_NAME');
+         }
     }
     return new AdminerCustomization($plugins);
-    */
-    
-    return new AdminerPlugin($plugins);
 }
 
 // include original Adminer or Adminer Editor
