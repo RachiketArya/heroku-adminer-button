@@ -11,7 +11,7 @@ function adminer_object() {
     $plugins = array(
         // specify enabled plugins here
          new AdminerEditForeign,
-         new AdminerTinymce,
+//          new AdminerTinymce,
          new AdminerTablesFilter,
          new AdminerEnumTypes,
          new AdminerEnumOption
