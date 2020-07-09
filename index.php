@@ -44,9 +44,12 @@ function adminer_object() {
         function loginForm() {
             global $drivers;
             $fixedDriver = getenv('CUSTOMIZE_DATABASE_DRIVER');
+            echo "<!-- driver is " . h($fixedDriver);
+            var_dump($drivers);
+            echo "-->";
             $dbServer = getenv('CUSTOMIZE_DATABASE_SERVER');
             echo "<table cellspacing='0' class='layout'>\n";
-            echo $this->loginFormField('driver', '<tr><th>' . lang('System') . '<td>', html_select("auth[driver]", $drivers, $fixedDriver, "loginDriver(this);") . "\n");
+            echo $this->loginFormField('driver', '<tr><th>' . lang('System') . '<td>', html_select("auth[driver]", $drivers, DRIVER, "loginDriver(this);") . "\n");
             echo $this->loginFormField('server', '<tr><th>' . lang('Server') . '<td>', '<input type="password" name="auth[server]" value="' . h($dbServer) . '" title="hostname[:port]" placeholder="..." autocapitalize="off">' . "\n");
             echo $this->loginFormField('username', '<tr><th>' . lang('Username') . '<td>', '<input name="auth[username]" id="username" value="' . h($_GET["username"]) . '" autocomplete="username" autocapitalize="off">' . script("focus(qs('#username')); qs('#username').form['auth[driver]'].onchange();"));
             echo $this->loginFormField('password', '<tr><th>' . lang('Password') . '<td>', '<input type="password" name="auth[password]" autocomplete="current-password">' . "\n");
