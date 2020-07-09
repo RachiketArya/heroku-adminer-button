@@ -19,3 +19,12 @@ ADMINER_BASIC_PASS_MD5 -  HTTP BASIC password (md5 of it)
 ADMINER_DATABASE_URL1 - preconfigured db connection string (for example PostgresSQL database url)
 
 ADMINER_DATABASE_NAME1 - preconfigured server friendly name
+
+
+### Thanks
+
+Thanks to:
+
+- https://github.com/herokumx/pgadminer
+
+- https://github.com/pematon/adminer-plugins
