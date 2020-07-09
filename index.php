@@ -1,12 +1,12 @@
 <?php
 
-$valid_passwords = array (getenv('ADMINER_BASIC_USER') => getenv('CUSTOMIZE_BASIC_PASS_MD5'));
+$valid_passwords = array (getenv('ADMINER_BASIC_USER') => getenv('ADMINER_BASIC_PASS_MD5'));
 $valid_users = array_keys($valid_passwords);
 
 $user = $_SERVER['PHP_AUTH_USER'];
 $pass = $_SERVER['PHP_AUTH_PW'];
 
-$validated = (in_array($user, $valid_users)) && ($pass == md5($valid_passwords[$user]));
+$validated = (in_array($user, $valid_users)) && (md5($pass) == $valid_passwords[$user]);
 
 if (!$validated) {
   header('WWW-Authenticate: Basic realm="Adminer Web UI"');
