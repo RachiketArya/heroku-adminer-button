@@ -11,7 +11,11 @@ CTRL (or CMD 💻) + Click to start
 ### Customization in Heroku
 
 This setup supports:
+
 ADMINER_BASIC_USER -  HTTP BASIC user name
+
 ADMINER_BASIC_PASS_MD5 -  HTTP BASIC password (md5 of it)
+
 ADMINER_DATABASE_URL1 - preconfigured db connection string (for example PostgresSQL database url)
+
 ADMINER_DATABASE_NAME1 - preconfigured server friendly name
