@@ -20,6 +20,10 @@ ADMINER_DATABASE_URL1 - preconfigured db connection string (for example Postgres
 
 ADMINER_DATABASE_NAME1 - preconfigured server friendly name
 
+ADMINER_DATABASE_URL2 - preconfigured second db connection string (for example PostgresSQL database url)
+
+ADMINER_DATABASE_NAME2 - preconfigured second server friendly name
+
 
 ### Thanks
 
