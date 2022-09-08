@@ -31,6 +31,7 @@ function adminer_object() {
          new AdminerEnumOption,
          new AdminerLoginServers([
             getenv('ADMINER_DATABASE_URL1') => getenv('ADMINER_DATABASE_NAME1'),
+            getenv('ADMINER_DATABASE_URL2') => getenv('ADMINER_DATABASE_NAME2'),
         ]),
     );
     
